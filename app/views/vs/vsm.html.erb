@@ -1,0 +1,30 @@
+<div class="container-fluid">
+	<div class="row text-right">
+		<div class="col-xs-12">
+			<h3>Heart Rate</h3>
+			<h1 id="hr"></h1>
+			<h3>HRV</h3>
+			<h1 id="hrv"></h1>
+			<h3>Respiration Rate</h3>
+			<h1 id="rr"></h1>
+			<h3>Posture</h3>
+			<h1 id="ps"></h1>
+			<h3>Temperature(Est.)</h3>
+			<h1 id="et"></h1>
+		</div>
+	</div>
+</div>
+
+<% content_for :js_scripts do %>
+<script>
+	$(function(){
+		setInterval(function(){
+			$.getJSON("http://localhost/", function(data){
+				$.each(data, function(key, val){
+					$("#"+key).html(val);
+				});
+			});
+		}, 1000);
+	});
+</script>
+<% end %>
