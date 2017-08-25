@@ -1,5 +1,6 @@
 class VsController < ApplicationController
   def show
+    #First so we get a Record and not a Record Array
   	@vs = VitalSign.select(:hr, :hrv, :rr, :ps, :et).first
   	render json: @vs
   end
