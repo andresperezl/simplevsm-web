@@ -1,7 +1,7 @@
 # simplevsm-web
 This webserver consist only of two simple actions:
 
-1. `get 'vsm', to: 'vs#vsm'` To display the lastest values received
+1. `get 'vsm', to: 'vs#vsm'` To return the latest values received in JSON format
 2. `post 'vs/:hr/:hrv/:rr/:ps/:et', to: 'vs#edit'` To receive and update the stored values
 
 Both action can be found in: [vs_controller.rb](app/controllers/vs_controller.rb)
