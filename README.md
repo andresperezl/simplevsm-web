@@ -1,4 +1,4 @@
-#simplevsm-web
+# simplevsm-web
 This webserver consist only of two simple actions:
 
 1. get 'vsm', to: 'vs#vsm' To display the lastest values received
